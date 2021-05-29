@@ -38,10 +38,37 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AssignmentOne\ClimateControl.cs" />
+        <Compile Include="AssignmentOne\Clothing.cs" />
+        <Compile Include="AssignmentOne\Program.cs" />
+        <Compile Include="AssignmentOne\Sports.cs" />
+        <Compile Include="AssignmentOne\TrendSetting.cs" />
+        <Compile Include="lap\s1\Product.cs" />
+        <Compile Include="lap\s1\Program.cs" />
+        <Compile Include="lap\s2\Diamon.cs" />
+        <Compile Include="lap\s2\Fashion.cs" />
+        <Compile Include="lap\s3\cart.cs" />
+        <Compile Include="lap\s3\Program.cs" />
+        <Compile Include="lap\s4\KhachHang.cs" />
+        <Compile Include="lap\s4\KhachNuocNgoai.cs" />
+        <Compile Include="lap\s4\KhachVietNam.cs" />
+        <Compile Include="lap\s4\Program.cs" />
+        <Compile Include="lap\s5\Program.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Properties\session1\Program.cs" />
-        <Compile Include="Properties\session1\Student.cs" />
+        <Compile Include="Session\ss1\Program.cs" />
+        <Compile Include="Session\ss1\Student.cs" />
+        <Compile Include="Session\ss2\Animo.cs" />
+        <Compile Include="Session\ss2\Cat.cs" />
+        <Compile Include="Session\ss2\IAnimo.cs" />
+        <Compile Include="Session\ss2\ICat.cs" />
+        <Compile Include="Session\ss3\Product.cs" />
+        <Compile Include="Session\ss3\Program.cs" />
+        <Compile Include="Session\ss4\Delegate.cs" />
+        <Compile Include="Session\ss4\Delegate1.cs" />
+        <Compile Include="Session\ss4\Program.cs" />
+        <Compile Include="Session\ss5\Product.cs" />
+        <Compile Include="Session\ss5\Program.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

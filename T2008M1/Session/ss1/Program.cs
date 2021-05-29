@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace T2008M1.Properties.session1
+namespace T2008M_AP.Session
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             Student s = new Student();
-            s.name = "Huong Gino";
+            s.name = "Quang Anh";
             Student.sName = "T2008M";
             ArrayList arrList = new ArrayList();
             arrList.Add("aa");
@@ -19,5 +19,5 @@ namespace T2008M1.Properties.session1
             ints.Add(4);
             ints.Add(1);
         }
-    }
+    } 
 }
