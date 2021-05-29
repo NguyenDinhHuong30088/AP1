@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace T2008M_AP.Lab.S1
+namespace T2008M_AP.Lab.s1
 {
     
     public class Product

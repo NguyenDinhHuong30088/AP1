@@ -1,6 +1,6 @@
 using System;
 
-namespace T2008M_AP.Lab.S1
+namespace T2008M_AP.Lab.s1
 {
     public class Program
     {
