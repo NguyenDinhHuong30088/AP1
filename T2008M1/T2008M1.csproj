@@ -53,6 +53,7 @@
         <Compile Include="lap\s4\KhachHang.cs" />
         <Compile Include="lap\s4\KhachNuocNgoai.cs" />
         <Compile Include="lap\s4\KhachVN.cs" />
+        <Compile Include="lap\s4\Program.cs" />
         <Compile Include="lap\s5\Program.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
