@@ -1,23 +1,23 @@
-namespace T2008M_AP.Lab.s4
+namespace T2008M_AP.Lap.s4
 {
-    public class KhachNuocNgoai : KhachHang
+    public class KhachNuocNgoai : Hoadondien
     {
-        public string nationality;
+        private string quoctich;
 
-        public KhachNuocNgoai(int id, string name, string dateTime, int amount, string nationality) : base(id, name, dateTime, amount)
+        public string Quoctich
         {
-            this.nationality = nationality;
+            get => quoctich;
+            set => quoctich = value;
         }
 
-        public string Nationality
+        public KhachNuocNgoai(int id, string name, string date, string dategetbill, int soluong, string quoctich) : base(id, name, date, dategetbill, soluong)
         {
-            get => nationality;
-            set => nationality = value;
+            this.quoctich = quoctich;
         }
 
-        public override double totalPrice()
+        public override decimal showbill()
         {
-            return amount * 2000;
+            return Thanhtien = Soluong * 2000;
         }
     }
 }

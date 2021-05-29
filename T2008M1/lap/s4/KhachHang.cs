@@ -1,52 +1,138 @@
-namespace T2008M_AP.Lab.s4
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+
+namespace T2008M_AP.Lap.s4
 {
-    public abstract class KhachHang
+    public class Khachang
     {
-        public int id;
-        public string name;
-        public string dateTime;
-        public int amount;
-        public double total;
+        private List<Hoadondien> khachhang;
 
-        public KhachHang(int id, string name, string dateTime, int amount)
+        public Khachang()
         {
-            this.id = id;
-            this.name = name;
-            this.dateTime = dateTime;
-            this.amount = amount;
-            total = totalPrice();
+            khachhang = new List<Hoadondien>();
         }
 
-        public int Id
+        public Hoadondien this[int index]
         {
-            get => id;
-            set => id = value;
+            get { return khachhang[index]; }
+            set { khachhang[index] = value; }
+        }
+        public List<Hoadondien> KhachHang
+        {
+            get => KhachHang;
+           
+        }
+        public void showAllBill()
+        {
+            foreach (var x in KhachHang)
+            {
+                if (x.GetType() == typeof(KhachVN) )
+                { 
+                    var a = (KhachVN) x;
+                    Console.WriteLine(a.Id+"-"+a.Name+"-"+a.Date+"-"+a.showbill() +"-"+a.Doituong  );
+                }
+                else  if (x.GetType() == typeof(KhachNuocNgoai) )
+                {
+                    var a = (KhachNuocNgoai) x;
+                    Console.WriteLine(a.Id+"-"+a.Name+"-"+a.Date+"-"+a.showbill()+"-"+a.Quoctich );
+
+                }
+            }   
         }
 
-        public string Name
+        public void loc()
         {
-            get => name;
-            set => name = value;
+            var x = 0;
+            do
+            {
+                Console.WriteLine("Bạn muốn chọn đối tượng nào? hãy ấn số");
+                Console.WriteLine("1.Người Việt Nam");
+                Console.WriteLine("2.Người nước ngoài");
+                try
+                {
+                    x= Convert.ToInt32(Console.ReadLine()); 
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+                
+                Console.WriteLine("Bạn nhập số:"+x);
+            } while (x!=1&&x!=2);
+
+            if (x==1)
+            {
+                Console.WriteLine("Nhập id của người muốn tìm:");
+                
+                tongsl(Convert.ToInt32(Console.ReadLine()), 1);
+                return;
+            } 
+            Console.WriteLine("Nhập id của người muốn tìm:");
+            tongsl(Convert.ToInt32(Console.ReadLine()), 2);
         }
 
-        public string DateTime
+        public void tongsl(int id,int chess)
         {
-            get => dateTime;
-            set => dateTime = value;
+            int tong=0;
+            foreach (var x in khachhang)
+            {
+                if (chess==1)
+                {
+                    if (x.GetType()==typeof(KhachVN)&&x.Id==id)
+                    {
+                        tong += x.Soluong;
+                    }
+                    
+                }
+                else
+                {
+                    if (x.GetType()==typeof(KhachNuocNgoai)&&x.Id==id)
+                    {
+                        tong += x.Soluong;
+                    }
+                }
+
+               
+            } 
+            if (tong==0)
+            {
+                Console.WriteLine("Khong tim thay id ");
+            }
+            else
+            { 
+                Console.WriteLine("Tong so luong dien:" +tong);
+            }
+            
         }
 
-        public int Amount
+        public void TbttNQ()
         {
-            get => amount;
-            set => amount = value;
+            decimal tb = 0; var count=0;
+            foreach (var x in KhachHang)
+            {
+                if (x.GetType() == typeof(KhachNuocNgoai))
+                {
+                    tb += x.showbill();
+                    count++;
+                }
+            }
+            Console.WriteLine("TBTTNQ la:" +tb/count);
         }
 
-        public double Total
+        public void showbillT1()
         {
-            get => total;
-            set => total = value;
+            Console.WriteLine("ALl bill t1");
+            foreach (var x in KhachHang)
+            {
+                if (x.Date =="01/2019")
+                {
+                    var a = x;
+                    Console.WriteLine(a.Id+"-"+a.Name+"-"+a.Date+"-"+a.showbill() );
+                }
+            }
         }
-
-        public abstract double totalPrice();
     }
 }
