@@ -55,6 +55,8 @@
         <Compile Include="lap\s4\KhachVN.cs" />
         <Compile Include="lap\s4\Program.cs" />
         <Compile Include="lap\s5\Program.cs" />
+        <Compile Include="Practical\GeometryExample\Cylinder.cs" />
+        <Compile Include="Practical\GeometryExample\Program.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Session\ss1\Program.cs" />

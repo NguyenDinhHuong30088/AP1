@@ -1,6 +1,6 @@
 
 using System;
-using T2008M_AP.Lab.S1;
+using T2008M_AP.Lab.s1;
 
 namespace T2008M_AP.Lab.s3
 {
