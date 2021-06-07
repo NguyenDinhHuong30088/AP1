@@ -8,13 +8,13 @@ namespace T2008M_AP.Practical.GeometryExample
             var cylinder = new Cylinder();
             while (true) {
                 try {
-                    Console.WriteLine("Enter size:");
+                    Console.WriteLine("Enter the dimensions of the cylinder:");
                     Console.Write("Radius: ");
                     cylinder.Radius = Convert.ToDouble(Console.ReadLine());
                     Console.Write("Height: ");
                     cylinder.Height = Convert.ToDouble(Console.ReadLine());
                     cylinder.Process();
-                    Console.WriteLine("Cylindrical feature");
+                    Console.WriteLine("Cylinder Characteristics");
                     Console.WriteLine(cylinder.Result());
                 }
                 catch (Exception n) {

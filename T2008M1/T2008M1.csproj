@@ -56,6 +56,9 @@
         <Compile Include="lap\s4\Program.cs" />
         <Compile Include="lap\s5\Program.cs" />
         <Compile Include="Practical\Example_2\Base.cs" />
+        <Compile Include="Practical\Example_2\Lion.cs" />
+        <Compile Include="Practical\Example_2\Program.cs" />
+        <Compile Include="Practical\Example_2\Tiger.cs" />
         <Compile Include="Practical\GeometryExample\Cylinder.cs" />
         <Compile Include="Practical\GeometryExample\Program.cs" />
         <Compile Include="Program.cs" />
